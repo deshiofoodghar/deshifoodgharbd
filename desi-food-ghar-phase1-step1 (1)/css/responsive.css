@@ -1,1 +1,605 @@
-@media(max-width:1080px){.desktop-nav{display:none}.header-search{max-width:none}.foundation-grid{grid-template-columns:repeat(3,1fr)}}@media(max-width:700px){.container{width:min(calc(100% - 24px),var(--container))}.header-inner{min-height:72px;flex-wrap:wrap;gap:8px;padding-block:8px}.brand-logo{width:46px;height:46px}.brand-name{font-size:1rem}.brand-tagline{font-size:.6rem}.header-search{order:3;flex-basis:100%}.header-actions{margin-left:auto}.foundation-hero{padding:46px 0}.hero-placeholder{min-height:320px}.foundation-section{padding:52px 0}.foundation-grid{grid-template-columns:repeat(2,1fr)}.footer-inner,.footer-bottom{flex-direction:column}.footer-contact{text-align:left}}@media(max-width:430px){.foundation-grid{grid-template-columns:1fr}}
+/* =========================================================
+   দেশী ফুড ঘর
+   GLOBAL RESPONSIVE SYSTEM
+   Phase 1 — Step 2
+========================================================= */
+
+
+/* =========================================================
+   01. LARGE DESKTOP
+   1200px and below
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    :root {
+        --section-padding: 64px;
+    }
+
+
+    .container {
+        width: min(
+            calc(100% - 40px),
+            var(--container-width)
+        );
+    }
+
+
+    .foundation-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   02. TABLET LANDSCAPE
+   1050px and below
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    :root {
+        --section-padding: 58px;
+    }
+
+
+    .foundation-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+
+    .hero-placeholder {
+        min-height: 340px;
+    }
+
+
+    .footer-inner {
+        gap: 24px;
+    }
+
+}
+
+
+/* =========================================================
+   03. TABLET
+   850px and below
+========================================================= */
+
+@media (max-width: 850px) {
+
+    :root {
+        --section-padding: 52px;
+    }
+
+
+    .container {
+        width:
+            calc(100% - 32px);
+    }
+
+
+    /* -----------------------------------------
+       HERO
+    ----------------------------------------- */
+
+    .foundation-hero {
+        padding:
+            50px 0;
+    }
+
+
+    .hero-placeholder {
+        min-height: 300px;
+    }
+
+
+    .hero-placeholder h1 {
+        max-width: 620px;
+    }
+
+
+    .hero-placeholder p {
+        max-width: 560px;
+        font-size: 1rem;
+    }
+
+
+    /* -----------------------------------------
+       CATEGORY GRID
+    ----------------------------------------- */
+
+    .foundation-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 14px;
+    }
+
+
+    .foundation-card {
+        min-height: 145px;
+    }
+
+
+    /* -----------------------------------------
+       FOOTER
+    ----------------------------------------- */
+
+    .footer-inner {
+        flex-direction: column;
+    }
+
+
+    .footer-contact {
+        text-align: left;
+    }
+
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+
+/* =========================================================
+   04. MOBILE
+   650px and below
+========================================================= */
+
+@media (max-width: 650px) {
+
+    :root {
+        --section-padding: 44px;
+    }
+
+
+    .container {
+        width:
+            calc(100% - 24px);
+    }
+
+
+    /* -----------------------------------------
+       TYPOGRAPHY
+    ----------------------------------------- */
+
+    h1 {
+        font-size:
+            clamp(1.85rem, 9vw, 2.5rem);
+
+        line-height: 1.28;
+    }
+
+
+    h2 {
+        font-size:
+            clamp(1.5rem, 7vw, 2rem);
+    }
+
+
+    h3 {
+        font-size:
+            1.25rem;
+    }
+
+
+    p {
+        font-size:
+            0.92rem;
+    }
+
+
+    /* -----------------------------------------
+       SECTION
+    ----------------------------------------- */
+
+    .foundation-section {
+        padding:
+            var(--section-padding) 0;
+    }
+
+
+    .section-heading {
+        margin-bottom: 26px;
+    }
+
+
+    .section-heading p {
+        max-width: 100%;
+    }
+
+
+    /* -----------------------------------------
+       HERO
+    ----------------------------------------- */
+
+    .foundation-hero {
+        padding:
+            42px 0;
+    }
+
+
+    .hero-placeholder {
+        min-height: 330px;
+
+        align-items: center;
+
+        text-align: center;
+    }
+
+
+    .hero-placeholder h1 {
+        margin-bottom: 12px;
+    }
+
+
+    .hero-placeholder p {
+        margin-bottom: 22px;
+    }
+
+
+    .primary-button {
+        min-height: 44px;
+
+        padding:
+            0 20px;
+
+        font-size:
+            0.9rem;
+    }
+
+
+    /* -----------------------------------------
+       CATEGORY GRID
+    ----------------------------------------- */
+
+    .foundation-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
+    }
+
+
+    .foundation-card {
+        min-height: 135px;
+
+        padding:
+            18px 14px;
+
+        border-radius:
+            var(--radius-medium);
+
+        text-align: center;
+
+        align-items: center;
+    }
+
+
+    .foundation-card strong {
+        font-size:
+            0.9rem;
+    }
+
+
+    .foundation-card span {
+        font-size:
+            0.75rem;
+    }
+
+
+    /* -----------------------------------------
+       FOOTER
+    ----------------------------------------- */
+
+    .site-footer {
+        padding-top:
+            34px;
+
+        padding-bottom:
+            76px;
+    }
+
+
+    .footer-inner {
+        padding-bottom:
+            22px;
+    }
+
+
+    .footer-inner strong {
+        font-size:
+            1.15rem;
+    }
+
+
+    .footer-contact {
+        font-size:
+            0.8rem;
+    }
+
+
+    .footer-bottom {
+        gap:
+            8px;
+
+        font-size:
+            0.72rem;
+    }
+
+
+    /* -----------------------------------------
+       WHATSAPP
+    ----------------------------------------- */
+
+    .floating-whatsapp {
+        width:
+            50px;
+
+        height:
+            50px;
+
+        right:
+            14px;
+
+        bottom:
+            78px;
+    }
+
+}
+
+
+/* =========================================================
+   05. SMALL MOBILE
+   480px and below
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .container {
+        width:
+            calc(100% - 20px);
+    }
+
+
+    :root {
+        --section-padding: 38px;
+    }
+
+
+    /* -----------------------------------------
+       HERO
+    ----------------------------------------- */
+
+    .hero-placeholder {
+        min-height:
+            300px;
+    }
+
+
+    .hero-placeholder h1 {
+        font-size:
+            1.85rem;
+    }
+
+
+    .hero-placeholder p {
+        font-size:
+            0.88rem;
+    }
+
+
+    /* -----------------------------------------
+       CATEGORY
+    ----------------------------------------- */
+
+    .foundation-grid {
+        gap:
+            8px;
+    }
+
+
+    .foundation-card {
+        min-height:
+            125px;
+
+        padding:
+            15px 10px;
+    }
+
+
+    .foundation-card strong {
+        font-size:
+            0.82rem;
+    }
+
+
+    .foundation-card span {
+        font-size:
+            0.7rem;
+    }
+
+
+    /* -----------------------------------------
+       SEARCH
+    ----------------------------------------- */
+
+    .header-search input {
+        font-size:
+            0.72rem;
+    }
+
+
+}
+
+
+/* =========================================================
+   06. VERY SMALL MOBILE
+   380px and below
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .container {
+        width:
+            calc(100% - 16px);
+    }
+
+
+    .foundation-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .foundation-card {
+        min-height:
+            115px;
+
+        padding:
+            12px 8px;
+    }
+
+
+    .foundation-card strong {
+        font-size:
+            0.78rem;
+    }
+
+
+    .foundation-card span {
+        display: none;
+    }
+
+
+    .hero-placeholder {
+        min-height:
+            280px;
+    }
+
+
+    .hero-placeholder h1 {
+        font-size:
+            1.65rem;
+    }
+
+
+    .hero-placeholder p {
+        font-size:
+            0.82rem;
+    }
+
+
+    .primary-button {
+        width:
+            100%;
+
+        max-width:
+            230px;
+    }
+
+}
+
+
+/* =========================================================
+   07. LANDSCAPE MOBILE
+========================================================= */
+
+@media (max-width: 850px) and (orientation: landscape) {
+
+    .foundation-hero {
+        padding:
+            30px 0;
+    }
+
+
+    .hero-placeholder {
+        min-height:
+            260px;
+    }
+
+
+    .mobile-bottom-nav {
+        min-height:
+            58px;
+    }
+
+
+    body {
+        padding-bottom:
+            64px;
+    }
+
+}
+
+
+/* =========================================================
+   08. REDUCED MOTION
+   Accessibility
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior:
+            auto;
+    }
+
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            0.01ms !important;
+
+        scroll-behavior:
+            auto !important;
+
+    }
+
+}
+
+
+/* =========================================================
+   09. PRINT
+========================================================= */
+
+@media print {
+
+    .site-header,
+    .floating-whatsapp,
+    .mobile-bottom-nav,
+    .nav-row {
+        display: none !important;
+    }
+
+
+    .foundation-section {
+        padding:
+            20px 0;
+    }
+
+
+    body {
+        background:
+            #ffffff;
+    }
+
+}
+
+
+/* =========================================================
+   END OF RESPONSIVE SYSTEM
+========================================================= */
