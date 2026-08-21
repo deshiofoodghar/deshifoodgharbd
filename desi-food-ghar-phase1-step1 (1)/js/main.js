@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{const y=document.getElementById("current-year");if(y)y.textContent=new Date().getFullYear();const s=document.getElementById("site-search");if(s)s.addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();console.info("Search ready for later implementation:",s.value.trim())}});});
